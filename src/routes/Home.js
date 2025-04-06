@@ -168,7 +168,7 @@ function Home() {
               operators in production.
             </li>
             <li>
-               Identified, recommended & implemented process improvement plans
+              Identified, recommended & implemented process improvement plans
               for PCBAs.
             </li>
             <li>

@@ -4,6 +4,7 @@
   height: 100vh;
   position: relative;
   overflow-x: hidden;
+  overflow-y: auto; /* Enable vertical scrolling for the entire page */
 }
 
 /* Fixed Background Text */
@@ -96,7 +97,6 @@
 .scroll-section {
   position: relative;
   z-index: 1;
-  height: 100vh;
   padding: 50px 10%;
   display: flex;
   justify-content: space-between;
@@ -105,7 +105,7 @@
   flex-wrap: wrap;
   opacity: 1;
   transition: opacity 0.5s ease;
-  overflow: hidden;
+  height: auto; /* Allow section to expand based on content */
 }
 
 .scroll-section.first {
@@ -121,7 +121,7 @@
   color: #fff;
   padding: 20px;
   border-radius: 10px;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,10 +129,20 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
-  overflow: hidden;
   text-align: left;
+  max-height: 100%;
+  overflow-y: auto; /* Enable scrolling if content overflows */
 }
 
+/* Adjust font size dynamically to fit text */
+.text-box h1,
+.text-box h2,
+.text-box p,
+.text-box li {
+  font-size: clamp(1rem, 5vw, 2rem);  /* Adjusting text size based on viewport width */
+}
+
+/* Image Box */
 .image-box {
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
@@ -140,7 +150,7 @@
 .image-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
 }
 

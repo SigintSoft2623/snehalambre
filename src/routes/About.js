@@ -174,7 +174,7 @@ function About() {
                 <br />
                 <div style={{ paddingLeft: "1em", textAlign: "left" }}>
                   Analyze validation test data for accuracy. Prepare compliance
-                  documentation and reports
+                  documentation and reports.
                 </div>
               </li>
               <li>
