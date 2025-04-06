@@ -2,7 +2,7 @@ import React from "react";
 import SnehalMain from "../assects/SnehalMain.jpeg";
 import snehalBosch from "../assects/SnaehalBosch.jpeg";
 import snehalActia from "../assects/Snehal3.jpeg";
-import snehalThales from "../assects/SnehalT.jpg";
+import snehalThales from "../assects/Thales.jpg";
 import snehalPNC from "../assects/PNC.JPG";
 import snehalAccutron from "../assects/Accutron.jpg";
 
