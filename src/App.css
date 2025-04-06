@@ -7,13 +7,12 @@
 }
 
 /* Fixed Background Text */
-/* Background Text Styles */
 .background-text {
   position: fixed;
   top: 50%;
   left: 0;
   width: 100%;
-  font-size: 10vw; /* Responsive font size based on viewport width */
+  font-size: 10vw;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.15);
   display: flex;
@@ -23,65 +22,55 @@
   user-select: none;
   padding: 0 5%;
   z-index: -1;
-  transition: all 0.3s ease; /* Smooth transition for responsiveness */
+  transition: all 0.3s ease;
 }
 
-/* Left Text Styles */
 .left-text {
   position: relative;
-  top: -10%; /* Adjust top position for responsiveness */
+  top: -10%;
 }
 
-/* Right Text Styles */
 .right-text {
   position: relative;
-  top: 30%; /* Adjust top position for responsiveness */
+  top: 30%;
   text-align: right;
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
   .background-text {
-    font-size: 12vw; /* Slightly smaller font size for medium screens */
+    font-size: 12vw;
   }
-
-  .left-text,
-  .right-text {
-    top: 0%; /* Adjust vertical alignment on smaller screens */
+  .left-text, .right-text {
+    top: 0%;
   }
 }
 
 @media (max-width: 768px) {
   .background-text {
-    font-size: 15vw; /* Even smaller font size for smaller screens */
+    font-size: 15vw;
   }
-
-  .left-text,
-  .right-text {
-    top: 10%; /* Adjust position to avoid text collision */
+  .left-text, .right-text {
+    top: 10%;
   }
 }
 
 @media (max-width: 480px) {
   .background-text {
-    font-size: 18vw; /* Smallest font size for very small screens */
+    font-size: 18vw;
   }
-
-  .left-text,
-  .right-text {
-    top: 20%; /* Adjust position for mobile screens */
+  .left-text, .right-text {
+    top: 20%;
   }
 }
 
-
-/* Centered Image Container */
+/* Centered Image */
 .center-image-container {
-  position: relative; /* Change to relative for scrolling */
+  position: relative;
   top: 70px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  width: 40vw; /* Keep the same width */
+  width: 40vw;
   height: auto;
   display: flex;
   justify-content: center;
@@ -116,14 +105,14 @@
   flex-wrap: wrap;
   opacity: 1;
   transition: opacity 0.5s ease;
+  overflow: hidden;
 }
 
-/* First Scroll Section - Special Styling */
 .scroll-section.first {
-  margin-top: 100vh; /* Ensure it's placed after the first section */
+  margin-top: 100vh;
 }
 
-/* Text Box Style */
+/* Text and Image Box */
 .text-box,
 .image-box {
   flex: 1;
@@ -136,17 +125,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 20px;
-  padding-right: 20px;
   box-sizing: border-box;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  white-space: normal;
+  word-break: break-word;
+  overflow: hidden;
+  text-align: left;
 }
 
-/* Image Box Style */
 .image-box {
-  border: 2px solid rgba(255, 255, 255, 0.3); 
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .image-box img {
@@ -156,35 +144,53 @@
   border-radius: 10px;
 }
 
-/* Bullet points - Gap on the left side */
+/* Bullet list */
 .text-box ul {
-  padding-left: 25px; 
+  padding-left: 25px;
   list-style-type: disc;
+  margin: 0;
+  overflow: hidden;
 }
 
 .text-box li {
-  margin-bottom: 5px;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: 0.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
   line-height: 1.6;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
-/* Adjust the layout when screen size is small (for responsiveness) */
+/* Increase h1 and h2 size */
+.text-box h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.text-box h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Responsive */
 @media screen and (max-width: 960px) {
   .background-text {
-    font-size: 6rem; /* Smaller text on mobile */
+    font-size: 6rem;
   }
 
   .scroll-section {
-    flex-direction: column; /* Stack text and image boxes on smaller screens */
+    flex-direction: column;
   }
 
   .text-box,
   .image-box {
-    max-width: 100%; /* Full width on small screens */
+    max-width: 100%;
+    height: auto;
   }
 
   .center-image-container {
-    width: 90vw; /* Make the centered image container smaller on mobile */
+    width: 90vw;
   }
 }
 
@@ -199,26 +205,26 @@
 }
 
 .social-media-icons-white {
-  display: flex;  /* This ensures items are in a row */
-  justify-content: space-between;  /* Space items evenly */
-  gap: 80px; /* This adds space between icons */
-  width: auto; /* Ensure it adjusts with the content */
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  width: auto;
   padding: 10px;
 }
 
 .social-media-icons-white a {
-  color: black;  /* Make the icons white */
-  font-size: 2rem;  /* Adjust icon size */
-  text-decoration: none;  /* Remove underline */
+  color: black;
+  font-size: 2rem;
+  text-decoration: none;
 }
 
-/* For smaller screens */
 @media (max-width: 768px) {
   .social-media-icons-white {
-    justify-content: center;  /* Center icons on small screens */
-    gap: 25px;  /* Adjust gap for smaller screens */
+    justify-content: center;
+    gap: 25px;
   }
 }
+
 .centered-description {
   text-align: center;
   font-size: 2rem;
@@ -229,7 +235,6 @@
   font-weight: 500;
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
   .centered-description {
     font-size: 1.1rem;
