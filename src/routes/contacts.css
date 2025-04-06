@@ -1,0 +1,64 @@
+/* Container for the scrolling contact info */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: auto;
+  padding: 1rem 0;
+  background: transparent;
+  position: relative;
+}
+
+/* Scrolling content */
+.contact-info {
+  white-space: nowrap;
+  font-size: 4rem;
+  font-weight: 600;
+  color: #333;
+  display: inline-block;
+}
+
+/* Animation for continuous scroll */
+.scroll-text {
+  animation: scroll-left 18s linear infinite;
+}
+
+/* Scrolling animation keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Style for links */
+.contact-info a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design: adjust font and layout for smaller screens */
+@media (max-width: 768px) {
+  .contact-info {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .scroll-text {
+    animation-duration: 25s; /* Slow down scroll for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info {
+    font-size: 1rem;
+  }
+}
+
